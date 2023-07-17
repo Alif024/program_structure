@@ -70,7 +70,6 @@ while True:
             else:
                 pass
         case _:
-            print("ใส่ 1-3 เท่านั้น")
             pass
     os.system('cls')
     home()
