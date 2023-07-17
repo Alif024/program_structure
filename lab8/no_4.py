@@ -52,12 +52,12 @@ while True:
             mode2 = True
             while mode2:
                 os.system('cls')
-                print("="*20, " BMI Detail ", "="*21)
+                print("="*20, " BMI Detail ", "="*32)
                 print("No.\tHeight\t\tWeight\t\tBMI\tDetail")
-                print("*"*55)
+                print("*"*66)
                 for i in range(len(list_data)):
                     print(f"{i+1}\t{list_data[i][1]:.2f}\t\t{list_data[i][2]:.2f}\t\t{list_data[i][3]:.2f}\t{list_data[i][4]}")
-                print("="*55)
+                print("="*66)
                 print("กลับหน้าหลัก Press Enter")
                 input("")
                 mode2 = False
