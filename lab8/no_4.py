@@ -39,8 +39,8 @@ while True:
                     status.append(weight)
                     status.append(detail)
                     list_data.append(status)
-                    print(f"Your BMI is {BMI:.2f} {detail}")
-                    print("ทำอีกครั้งกด: y\tกลับหน้าหลัก: [n]")
+                    print(f"\nYour BMI is {BMI:.2f} {detail}")
+                    print("\n\nทำอีกครั้งกด: y\t\t\t\tกลับหน้าหลัก: [n]")
                     state1 = input("")
                     if state1 == 'y':
                         pass
