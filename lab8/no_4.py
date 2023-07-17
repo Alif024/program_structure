@@ -47,7 +47,6 @@ while True:
                     else:
                         mode1 = False
             except KeyboardInterrupt:
-                print("\n")
                 mode1 = False
         case "2":
             mode2 = True
