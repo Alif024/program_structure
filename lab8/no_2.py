@@ -1,16 +1,38 @@
-list = [["Olarik", 3.5], ["Kaveepoj", 3.9], ["Suwichai", 3.2]]
-if len(list) != 0:
-    print("=====================================")
-    print("index\t\tname\t\tGPA")
-    print("=====================================")
-    for i in range(len(list)):
-        if len(list[i][0]) > 7:
-            print(f"{i+1}\t\t{list[i][0]}\t{list[i][1]}")
-        else:
-            print(f"{i+1}\t\t{list[i][0]}\t\t{list[i][1]}")
-    print("=====================================")
-    sum_GPA = 0
-    for i in range(len(list)):
-        sum_GPA += list[i][1]
-    print(f"average\t\t\t\t{sum_GPA/len(list):.2f}")
-    print("=====================================")
+nums = []
+count = int(input("Enter number of times : "))
+for i in range(count):
+    num = int(input(f"Enter number {i+1} : "))
+    nums.append(num)
+sum = 0
+for i in nums:
+    sum += i
+print(f"แสดงตัวแปรลิส nums : {nums}")
+print(f"ค่าเฉลี่ยของสมาชิกในลิสต์ nums : {sum/len(nums):.2f}")
+max = nums[0]
+for i in nums:
+    if i > max:
+        max = i
+min = nums[0]
+for i in nums:
+    if i < min:
+        min = i
+print(f"ค่าที่มากที่สุดคือ {max} และค่าที่น้อยที่สุดคือ {min}")
+'''nums_2 = nums.copy()
+nums_2.remove(max)
+nums_2.remove(min)
+max = nums_2[0]
+for i in nums_2:
+    if i > max:
+        max = i
+min = nums_2[0]
+for i in nums_2:
+    if i < min:
+        min = i
+print(f"ค่ามากที่สุดอันดับที่ 2 คือ {max} และค่าน้อยที่สุดอันดับที่ 2 คือ {min}")'''
+nums.sort()
+print(f"ค่ามากที่สุดอันดับที่ 2 คือ {nums[-2]} และค่าน้อยที่สุดอันดับที่ 2 คือ {nums[1]}")
+odd_nums = []
+for i in nums:
+    if i%2 != 0: 
+        odd_nums.append(i)
+print(f"จำนวนเลขคี่คือ {len(odd_nums)} และในลิสต์นี้คือ {odd_nums}")
