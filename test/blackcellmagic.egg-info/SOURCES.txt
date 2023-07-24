@@ -1,0 +1,5 @@
+blackcellmagic.egg-info/PKG-INFO
+blackcellmagic.egg-info/SOURCES.txt
+blackcellmagic.egg-info/dependency_links.txt
+blackcellmagic.egg-info/requires.txt
+blackcellmagic.egg-info/top_level.txt
