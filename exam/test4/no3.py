@@ -6,7 +6,7 @@ while True:
             if i == 0:
                 pass
             else:
-                result = result * i
+                result *= i
         print(f"Result of {num}! is {result:,}")
         break
     else:
