@@ -1,8 +1,14 @@
 num = int(input("Please enter number of factorial : "))
-result = 1
-for i in range(0, num+1):
-    if i == 0:
-        pass
+while True:
+    if num < 10 and num > 0:
+        result = 1
+        for i in range(0, num+1):
+            if i == 0:
+                pass
+            else:
+                result = result * i
+        print(f"Result of {num}! is {result}")
+        break
     else:
-        result = result * i
-print(f"Result of {num}! is {result}")
+        print("ใส่แค่ 1-9")
+        num = int(input("Please enter number of factorial : "))
