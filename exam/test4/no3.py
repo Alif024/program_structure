@@ -7,7 +7,7 @@ while True:
                 pass
             else:
                 result = result * i
-        print(f"Result of {num}! is {result}")
+        print(f"Result of {num}! is {result:,}")
         break
     else:
         print("ใส่แค่ 1-9")
