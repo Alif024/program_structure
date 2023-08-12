@@ -1,0 +1,24 @@
+{
+  "folders": [
+	{
+		"path": "../../../python_test"
+	},
+	{
+		"path": "F:/project"
+	},
+	{
+		"path": "C:/Users/aleef/OneDrive/เอกสาร/Arduino"
+	},
+	{
+		"path": "../.."
+	}
+],
+  "settings": {
+    "files.associations": {
+      "array": "cpp",
+      "new": "cpp"
+    },
+    "powershell.cwd": "f:\\arduino\\testArduinoPIO",
+    "liveServer.settings.multiRootWorkspaceName": "YOLOv8"
+  }
+}
