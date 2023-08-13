@@ -113,5 +113,3 @@ while True:
         if confirm_exit == 'y':
             print("thank you")
             break
-    else:
-        print()
