@@ -28,8 +28,8 @@ system('cls')
 balance = randint(0, 100000)
 print(f"ยอดเงินคงเหลือ : {balance:,} บาท")
 while True:
-    print('')
     print("กรุณาเลือกเมนู")
+
     while True:
         try:
             choose = int(input("1:ฝาก, 2:ถอน, 3:ถามยอด, 0:ยกเลิก ===> "))
@@ -38,10 +38,12 @@ while True:
             else:
                 print('')
                 print(" /!\ ใส่ตัวเลข 0-3 เท่านั้น /!\ ")
+                print("กรุณาเลือกเมนู")
         except:
             print('')
-            print("กรุณาเลือกเมนู")
             print(" /!\ ใส่ตัวเลข 0-3 เท่านั้น /!\ ")
+            print("กรุณาเลือกเมนู")
+
     try:
         if choose == 1:
             balance = deposit(balance)
@@ -56,5 +58,6 @@ while True:
     except:
         print(" /!\ /!\ /!\ ERROR /!\ /!\ /!\ ")
 
+    print('')
 
 print("ขอบคุณที่ใช้บริการคะ")
