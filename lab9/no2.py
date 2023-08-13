@@ -21,7 +21,7 @@ def choose1Task():
     try:
         print("คำนวณหาพื้นที่สี่เหลี่ยมจัตุรัส")
         sideLength = int(input("ใส่ความยาวด้าน >> "))
-        print(f"พื้นที่สี่เหลี่ยมจัตุรัส = {square(sideLength)}")
+        print(f"พื้นที่สี่เหลี่ยมจัตุรัส = {square(sideLength):,.3f}")
         input("กด Enter")
     except:
         input(" /!\ /!\ /!\ ERROR /!\ /!\ /!\ \nกด Enter")
@@ -32,7 +32,7 @@ def choose2Task():
         print("คำนวณหาพื้นที่สี่เหลี่ยมพื้นผ้า")
         width = int(input("ใส่ความกว้าง >> "))
         length = int(input("ใส้ความยาว >> "))
-        print(f"พื้นที่สี่เหลี่ยมพื้นผ้า = {rectangular(width, length)}")
+        print(f"พื้นที่สี่เหลี่ยมพื้นผ้า = {rectangular(width, length):,.3f}")
         input("กด Enter")
     except:
         input(" /!\ /!\ /!\ ERROR /!\ /!\ /!\ \nกด Enter")
@@ -42,7 +42,7 @@ def choose3Task():
     try:
         print("คำนวณหาพื้นที่วงกลม")
         radius = int(input("ใส้ความยาวรัศมี >> "))
-        print(f"พื้นที่วงกลม = {circle(radius)}")
+        print(f"พื้นที่วงกลม = {circle(radius):,.3f}")
         input("กด Enter")
     except:
         input(" /!\ /!\ /!\ ERROR /!\ /!\ /!\ \nกด Enter")
@@ -52,7 +52,8 @@ def choose4Task():
     try:
         print("คำนวณหาพื้นที่สามเหลี่ยมด้านเท่า")
         sideLength = int(input("ใส่ความยาวด้าน >> "))
-        print(f"พื้นที่สามเหลี่ยมด้านเท่า = {equilateralTriangle(sideLength)}")
+        print(
+            f"พื้นที่สามเหลี่ยมด้านเท่า = {equilateralTriangle(sideLength):,.3f}")
         input("กด Enter")
     except:
         input(" /!\ /!\ /!\ ERROR /!\ /!\ /!\ \nกด Enter")
