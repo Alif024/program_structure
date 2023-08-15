@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2566-08-15 11:21:24 AM"/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTJUMjNVRU47MjU2Ni0wOC0xNTsxMDo0NzoyNCBBTTsyNzQ1"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTJUMjNVRU47MjU2Ni0wOC0xNTsxMToyMToyNCBBTTsyOzI4NDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="choose" type="Integer" array="False" size=""/>
+            <declare name="YesNo" type="String" array="False" size=""/>
+            <declare name="I, R, V" type="Real" array="False" size=""/>
+            <declare name="while1, while2, while3" type="Boolean" array="False" size=""/>
+            <assign variable="while1" expression="True"/>
+            <while expression="while1">
+                <call expression="menu"/>
+                <assign variable="while2" expression="True"/>
+                <while expression="while2">
+                    <input variable="choose"/>
+                    <if expression="choose &gt;= 1 and choose &lt;= 4">
+                        <then>
+                            <assign variable="while2" expression="False"/>
+                        </then>
+                        <else>
+                            <call expression="menu"/>
+                            <output expression="&quot;/!\ &#3651;&#3626;&#3656;&#3605;&#3633;&#3623;&#3648;&#3621;&#3586; 1-4 &#3648;&#3607;&#3656;&#3634;&#3609;&#3633;&#3657;&#3609; /!\&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </while>
+                <if expression="choose == 1">
+                    <then>
+                        <output expression="&quot;&#3627;&#3634;&#3588;&#3656;&#3634;&#3649;&#3619;&#3591;&#3604;&#3633;&#3609;&#3652;&#3615;&#3615;&#3657;&#3634;&quot;" newline="True"/>
+                        <output expression="&quot;Electric Current &gt;&gt; &quot;" newline="True"/>
+                        <input variable="I"/>
+                        <output expression="&quot;Resistance &gt;&gt; &quot;" newline="True"/>
+                        <input variable="R"/>
+                        <output expression="&quot;Voltage = &quot; &amp; voltage(I, R) &amp; &quot; V&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="choose == 2">
+                            <then>
+                                <output expression="&quot;&#3627;&#3634;&#3588;&#3656;&#3634;&#3585;&#3619;&#3632;&#3649;&#3626;&#3652;&#3615;&#3615;&#3657;&#3634;&quot;" newline="True"/>
+                                <output expression="&quot;Voltage &gt;&gt; &quot;" newline="True"/>
+                                <input variable="V"/>
+                                <output expression="&quot;Resistance &gt;&gt; &quot;" newline="True"/>
+                                <input variable="R"/>
+                                <output expression="&quot;Electric Current = &quot; &amp; electricCurrent(V, R) &amp; &quot; A&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="choose == 3">
+                                    <then>
+                                        <output expression="&quot;&#3627;&#3634;&#3588;&#3656;&#3634;&#3588;&#3623;&#3634;&#3617;&#3605;&#3657;&#3634;&#3609;&#3607;&#3634;&#3609;&quot;" newline="True"/>
+                                        <output expression="&quot;Voltage &gt;&gt; &quot;" newline="True"/>
+                                        <input variable="V"/>
+                                        <output expression="&quot;Electric Current &gt;&gt; &quot;" newline="True"/>
+                                        <input variable="I"/>
+                                        <output expression="&quot;Resistance = &quot; &amp; resistance(I, V) &amp; &quot;&#937;&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;&#3605;&#3657;&#3629;&#3591;&#3585;&#3634;&#3619;&#3629;&#3629;&#3585;&#3592;&#3634;&#3585;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617;&#3627;&#3619;&#3639;&#3629;&#3652;&#3617;&#3656;&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;&#3585;&#3604; y &#3629;&#3629;&#3585;&#3592;&#3634;&#3585;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617;, &#3585;&#3604; n &#3585;&#3621;&#3633;&#3610;&#3652;&#3611;&#3607;&#3637;&#3656;&#3648;&#3617;&#3609;&#3641;&quot;" newline="True"/>
+                                        <input variable="YesNo"/>
+                                        <assign variable="while3" expression="True"/>
+                                        <while expression="while3">
+                                            <if expression="YesNo == &quot;y&quot; Or YesNo == &quot;n&quot;">
+                                                <then>
+                                                    <assign variable="while3" expression="False"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;&#3605;&#3657;&#3629;&#3591;&#3585;&#3634;&#3619;&#3629;&#3629;&#3585;&#3592;&#3634;&#3585;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617;&#3627;&#3619;&#3639;&#3629;&#3652;&#3617;&#3656;&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;&#3585;&#3604; y &#3629;&#3629;&#3585;&#3592;&#3634;&#3585;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617;, &#3585;&#3604; n &#3585;&#3621;&#3633;&#3610;&#3652;&#3611;&#3607;&#3637;&#3656;&#3648;&#3617;&#3609;&#3641;&quot;  &amp; ToChar(13) &amp;&#13;&#10;&quot;/!\ &#3651;&#3626;&#3656; y &#3627;&#3619;&#3639;&#3629; n &#3648;&#3607;&#3656;&#3634;&#3609;&#3633;&#3657;&#3609; /!\&quot;" newline="True"/>
+                                                    <input variable="YesNo"/>
+                                                </else>
+                                            </if>
+                                        </while>
+                                        <if expression="YesNo == &quot;y&quot;">
+                                            <then>
+                                                <assign variable="while1" expression="False"/>
+                                                <output expression="&quot;Thank you&quot;" newline="True"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="electricCurrent" type="Real" variable="result">
+        <parameters>
+            <parameter name="V" type="Real" array="False"/>
+            <parameter name="R" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Real" array="False" size=""/>
+            <assign variable="result" expression="V/R"/>
+        </body>
+    </function>
+    <function name="menu" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;&#3585;&#3604; 1 &#3627;&#3634;&#3588;&#3656;&#3634;&#3649;&#3619;&#3591;&#3604;&#3633;&#3609;&#3652;&#3615;&#3615;&#3657;&#3634;&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;&#3585;&#3604; 2 &#3627;&#3634;&#3588;&#3656;&#3634;&#3585;&#3619;&#3632;&#3649;&#3626;&#3652;&#3615;&#3615;&#3657;&#3634;&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;&#3585;&#3604; 3 &#3627;&#3634;&#3588;&#3656;&#3634;&#3588;&#3623;&#3634;&#3617;&#3605;&#3657;&#3634;&#3609;&#3607;&#3634;&#3609;&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;&#3585;&#3604; 4 &#3629;&#3629;&#3585;&#3592;&#3634;&#3585;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617;&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="resistance" type="Real" variable="result">
+        <parameters>
+            <parameter name="I" type="Real" array="False"/>
+            <parameter name="V" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Real" array="False" size=""/>
+            <assign variable="result" expression="V/I"/>
+        </body>
+    </function>
+    <function name="voltage" type="Real" variable="result">
+        <parameters>
+            <parameter name="I" type="Real" array="False"/>
+            <parameter name="R" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Real" array="False" size=""/>
+            <assign variable="result" expression="I*R"/>
+        </body>
+    </function>
+</flowgorithm>
