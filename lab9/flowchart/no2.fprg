@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2566-08-15 11:53:45 AM"/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTJUMjNVRU47MjU2Ni0wOC0xNTsxMToyNzoxMCBBTTsyNzM5"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTJUMjNVRU47MjU2Ni0wOC0xNTsxMTo1Mzo0NSBBTTs3OzI4NjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="while1, while2, while3" type="Boolean" array="False" size=""/>
+            <declare name="choose" type="Integer" array="False" size=""/>
+            <declare name="YesNo" type="String" array="False" size=""/>
+            <declare name="sideLength, width, length, radius" type="Real" array="False" size=""/>
+            <assign variable="while1" expression="True"/>
+            <while expression="while1">
+                <call expression="menu"/>
+                <assign variable="while2" expression="True"/>
+                <while expression="while2">
+                    <output expression="&quot;&#3648;&#3621;&#3639;&#3629;&#3585;&#3585;&#3634;&#3619;&#3607;&#3635;&#3591;&#3634;&#3609;&#3586;&#3629;&#3591;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617; &gt;&gt; &quot;" newline="True"/>
+                    <input variable="choose"/>
+                    <if expression="choose &gt;= 1 and choose &lt;= 5">
+                        <then>
+                            <assign variable="while2" expression="False"/>
+                        </then>
+                        <else>
+                            <call expression="menu"/>
+                            <output expression="&quot;/!\ &#3651;&#3626;&#3656;&#3605;&#3633;&#3623;&#3648;&#3621;&#3586; 1-5 &#3648;&#3607;&#3656;&#3634;&#3609;&#3633;&#3657;&#3609; /!\&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </while>
+                <if expression="choose == 1">
+                    <then>
+                        <output expression="&quot;&#3588;&#3635;&#3609;&#3623;&#3603;&#3627;&#3634;&#3614;&#3639;&#3657;&#3609;&#3607;&#3637;&#3656;&#3626;&#3637;&#3656;&#3648;&#3627;&#3621;&#3637;&#3656;&#3618;&#3617;&#3592;&#3633;&#3605;&#3640;&#3619;&#3633;&#3626;&quot;" newline="True"/>
+                        <output expression="&quot;&#3651;&#3626;&#3656;&#3588;&#3623;&#3634;&#3617;&#3618;&#3634;&#3623;&#3604;&#3657;&#3634;&#3609; &gt;&gt; &quot;" newline="True"/>
+                        <input variable="sideLength"/>
+                        <output expression="&quot;&#3614;&#3639;&#3657;&#3609;&#3607;&#3637;&#3656;&#3626;&#3637;&#3656;&#3648;&#3627;&#3621;&#3637;&#3656;&#3618;&#3617;&#3592;&#3633;&#3605;&#3640;&#3619;&#3633;&#3626; = &quot; &amp; square(sideLength)" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="choose == 2">
+                            <then>
+                                <output expression="&quot;&#3588;&#3635;&#3609;&#3623;&#3603;&#3627;&#3634;&#3614;&#3639;&#3657;&#3609;&#3607;&#3637;&#3656;&#3626;&#3637;&#3656;&#3648;&#3627;&#3621;&#3637;&#3656;&#3618;&#3617;&#3614;&#3639;&#3657;&#3609;&#3612;&#3657;&#3634;&quot;" newline="True"/>
+                                <output expression="&quot;&#3651;&#3626;&#3656;&#3588;&#3623;&#3634;&#3617;&#3585;&#3623;&#3657;&#3634;&#3591; &gt;&gt; &quot;" newline="True"/>
+                                <input variable="width"/>
+                                <output expression="&quot;&#3651;&#3626;&#3657;&#3588;&#3623;&#3634;&#3617;&#3618;&#3634;&#3623; &gt;&gt; &quot;" newline="True"/>
+                                <input variable="length"/>
+                                <output expression="&quot;&#3614;&#3639;&#3657;&#3609;&#3607;&#3637;&#3656;&#3626;&#3637;&#3656;&#3648;&#3627;&#3621;&#3637;&#3656;&#3618;&#3617;&#3614;&#3639;&#3657;&#3609;&#3612;&#3657;&#3634; = &quot; &amp; rectangular(width, length)" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="choose == 3">
+                                    <then>
+                                        <output expression="&quot;&#3588;&#3635;&#3609;&#3623;&#3603;&#3627;&#3634;&#3614;&#3639;&#3657;&#3609;&#3607;&#3637;&#3656;&#3623;&#3591;&#3585;&#3621;&#3617;&quot;" newline="True"/>
+                                        <output expression="&quot;&#3651;&#3626;&#3656;&#3588;&#3623;&#3634;&#3617;&#3618;&#3634;&#3623;&#3619;&#3633;&#3624;&#3617;&#3637; &gt;&gt; &quot;" newline="True"/>
+                                        <input variable="radius"/>
+                                        <output expression="&quot;&#3614;&#3639;&#3657;&#3609;&#3607;&#3637;&#3656;&#3623;&#3591;&#3585;&#3621;&#3617; = &quot; &amp; circle(radius)" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="choose == 4">
+                                            <then>
+                                                <output expression="&quot;&#3588;&#3635;&#3609;&#3623;&#3603;&#3627;&#3634;&#3614;&#3639;&#3657;&#3609;&#3607;&#3637;&#3656;&#3626;&#3634;&#3617;&#3648;&#3627;&#3621;&#3637;&#3656;&#3618;&#3617;&#3604;&#3657;&#3634;&#3609;&#3648;&#3607;&#3656;&#3634;&quot;" newline="True"/>
+                                                <output expression="&quot;&#3651;&#3626;&#3656;&#3588;&#3623;&#3634;&#3617;&#3618;&#3634;&#3623;&#3604;&#3657;&#3634;&#3609; &gt;&gt; &quot;" newline="True"/>
+                                                <input variable="sideLength"/>
+                                                <output expression="&quot;&#3614;&#3639;&#3657;&#3609;&#3607;&#3637;&#3656;&#3626;&#3634;&#3617;&#3648;&#3627;&#3621;&#3637;&#3656;&#3618;&#3617;&#3604;&#3657;&#3634;&#3609;&#3648;&#3607;&#3656;&#3634; = &quot; &amp; equilateralTriangle(sideLength)" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;&#3605;&#3657;&#3629;&#3591;&#3585;&#3634;&#3619;&#3629;&#3629;&#3585;&#3592;&#3634;&#3585;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617;&#3627;&#3619;&#3639;&#3629;&#3652;&#3617;&#3656;&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;&#3585;&#3604; y &#3605;&#3585;&#3621;&#3591;, &#3585;&#3604; n &#3618;&#3585;&#3648;&#3621;&#3636;&#3585; &gt;&gt; &quot;" newline="True"/>
+                                                <input variable="YesNo"/>
+                                                <assign variable="while3" expression="True"/>
+                                                <while expression="while3">
+                                                    <if expression="YesNo == &quot;y&quot; or YesNo == &quot;n&quot;">
+                                                        <then>
+                                                            <assign variable="while3" expression="False"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;&#3651;&#3626;&#3656; y &#3627;&#3619;&#3639;&#3629; n &#3648;&#3607;&#3656;&#3634;&#3609;&#3633;&#3657;&#3609; &gt;&gt; &quot;" newline="True"/>
+                                                            <input variable="YesNo"/>
+                                                        </else>
+                                                    </if>
+                                                </while>
+                                                <if expression="YesNo == &quot;y&quot;">
+                                                    <then>
+                                                        <output expression="&quot;thank you&quot;" newline="True"/>
+                                                        <assign variable="while1" expression="False"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="circle" type="Real" variable="result">
+        <parameters>
+            <parameter name="radius" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Real" array="False" size=""/>
+            <assign variable="result" expression="(22 * radius^2) / 7"/>
+        </body>
+    </function>
+    <function name="equilateralTriangle" type="Real" variable="result">
+        <parameters>
+            <parameter name="sideLength" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Real" array="False" size=""/>
+            <assign variable="result" expression="((3 ^ (1 / 2)) / 4) * sideLength^2"/>
+        </body>
+    </function>
+    <function name="menu" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;&#3585;&#3604; 1 &#3588;&#3635;&#3609;&#3623;&#3603;&#3627;&#3634;&#3614;&#3639;&#3657;&#3609;&#3607;&#3637;&#3656;&#3626;&#3637;&#3656;&#3648;&#3627;&#3621;&#3637;&#3656;&#3618;&#3617;&#3592;&#3633;&#3605;&#3640;&#3619;&#3633;&#3626;&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;&#3585;&#3604; 2 &#3588;&#3635;&#3609;&#3623;&#3603;&#3627;&#3634;&#3614;&#3639;&#3657;&#3609;&#3607;&#3637;&#3656;&#3626;&#3637;&#3656;&#3648;&#3627;&#3621;&#3637;&#3656;&#3618;&#3617;&#3614;&#3639;&#3657;&#3609;&#3612;&#3657;&#3634;&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;&#3585;&#3604; 3 &#3588;&#3635;&#3609;&#3623;&#3603;&#3627;&#3634;&#3614;&#3639;&#3657;&#3609;&#3607;&#3637;&#3656;&#3623;&#3591;&#3585;&#3621;&#3617;&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;&#3585;&#3604; 4 &#3588;&#3635;&#3609;&#3623;&#3603;&#3627;&#3634;&#3614;&#3639;&#3657;&#3609;&#3607;&#3637;&#3656;&#3626;&#3634;&#3617;&#3648;&#3627;&#3621;&#3637;&#3656;&#3618;&#3617;&#3604;&#3657;&#3634;&#3609;&#3648;&#3607;&#3656;&#3634;&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;&#3585;&#3604; 5 &#3629;&#3629;&#3585;&#3592;&#3634;&#3585;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617;&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="rectangular" type="Real" variable="result">
+        <parameters>
+            <parameter name="width" type="Real" array="False"/>
+            <parameter name="length" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Real" array="False" size=""/>
+            <assign variable="result" expression="width * length"/>
+        </body>
+    </function>
+    <function name="square" type="Real" variable="result">
+        <parameters>
+            <parameter name="sideLength" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Real" array="False" size=""/>
+            <assign variable="result" expression="sideLength * sideLength"/>
+        </body>
+    </function>
+</flowgorithm>

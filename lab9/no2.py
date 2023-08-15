@@ -33,7 +33,7 @@ while True:
     menu()
     while True:
         try:
-            choose = float(input("เลือกการทำงานของโปรแกรม >> "))
+            choose = int(input("เลือกการทำงานของโปรแกรม >> "))
             if choose >= 1 and choose <= 5:
                 break
             else:
