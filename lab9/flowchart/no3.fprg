@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2566-08-15 12:02:28 PM"/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTJUMjNVRU47MjU2Ni0wOC0xNTsxMTo1NDo1MCBBTTsyNzQz"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTJUMjNVRU47MjU2Ni0wOC0xNTsxMjowMjoyOCBQTTs0OzI4Njg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body/>
+    </function>
+    <function name="withdrawMoney" type="Real" variable="balance">
+        <parameters>
+            <parameter name="balance" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="money" type="Real" array="False" size=""/>
+            <output expression="&quot;&#3592;&#3635;&#3609;&#3623;&#3609;&#3648;&#3591;&#3636;&#3609; ===&gt; &quot;" newline="True"/>
+            <input variable="money"/>
+            <if expression="money &gt; balance">
+                <then>
+                    <output expression="&quot;&#3618;&#3629;&#3604;&#3648;&#3591;&#3636;&#3609;&#3617;&#3637;&#3652;&#3617;&#3656;&#3648;&#3614;&#3637;&#3618;&#3591;&#3614;&#3629;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="balance" expression="balance - money"/>
+                    <output expression="&quot;&#3618;&#3629;&#3604;&#3648;&#3591;&#3636;&#3609;&#3588;&#3591;&#3648;&#3627;&#3621;&#3639;&#3629; : &quot; &amp; balance &amp; &quot;&#3610;&#3634;&#3607;&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
