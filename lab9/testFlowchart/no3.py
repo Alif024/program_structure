@@ -52,7 +52,7 @@ while True:
         elif choose == 3:
             askBalance(balance)
         elif choose == 0:
-            YesNo = input("กด y เพื่อออกจากโปรแกรม, กด n ไปหน้าเมนู >> ")
+            YesNo = input("กด y เพื่อออกจากโปรแกรม >> ")
             if YesNo == "y":
                 break
     except:
