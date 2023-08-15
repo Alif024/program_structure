@@ -4,13 +4,88 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="User"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2566-08-15 12:02:28 PM"/>
+        <attribute name="saved" value="2023-08-15 06:43:11 PM"/>
         <attribute name="created" value="VXNlcjtERVNLVE9QLTJUMjNVRU47MjU2Ni0wOC0xNTsxMTo1NDo1MCBBTTsyNzQz"/>
         <attribute name="edited" value="VXNlcjtERVNLVE9QLTJUMjNVRU47MjU2Ni0wOC0xNTsxMjowMjoyOCBQTTs0OzI4Njg="/>
+        <attribute name="edited" value="YWxlZWY7VVNFUjAxOzIwMjMtMDgtMTU7MDY6NDM6MTEgUE07NjsyMzE4"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
-        <body/>
+        <body>
+            <declare name="balance" type="Real" array="False" size=""/>
+            <declare name="YesNo" type="String" array="False" size=""/>
+            <declare name="choose" type="Integer" array="False" size=""/>
+            <declare name="while1, while2" type="Boolean" array="False" size=""/>
+            <assign variable="balance" expression="Random(100000)"/>
+            <output expression="&quot;&#3618;&#3629;&#3604;&#3648;&#3591;&#3636;&#3609;&#3588;&#3591;&#3648;&#3627;&#3621;&#3639;&#3629; : &quot; &amp; balance &amp; &quot; &#3610;&#3634;&#3607;&quot;" newline="True"/>
+            <assign variable="while1" expression="True"/>
+            <while expression="while1">
+                <output expression="&quot;&#3585;&#3619;&#3640;&#3603;&#3634;&#3648;&#3621;&#3639;&#3629;&#3585;&#3648;&#3617;&#3609;&#3641;&quot;" newline="True"/>
+                <assign variable="while2" expression="True"/>
+                <while expression="while2">
+                    <output expression="&quot;1:&#3613;&#3634;&#3585;, 2:&#3606;&#3629;&#3609;, 3:&#3606;&#3634;&#3617;&#3618;&#3629;&#3604;, 0:&#3618;&#3585;&#3648;&#3621;&#3636;&#3585; ===&gt; &quot;" newline="True"/>
+                    <input variable="choose"/>
+                    <if expression="choose &gt;= 0 and choose &lt;= 3">
+                        <then>
+                            <assign variable="while2" expression="False"/>
+                        </then>
+                        <else>
+                            <output expression="&quot; /!\ &#3651;&#3626;&#3656;&#3605;&#3633;&#3623;&#3648;&#3621;&#3586; 0-3 &#3648;&#3607;&#3656;&#3634;&#3609;&#3633;&#3657;&#3609; /!\ &quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;&#3585;&#3619;&#3640;&#3603;&#3634;&#3648;&#3621;&#3639;&#3629;&#3585;&#3648;&#3617;&#3609;&#3641;&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </while>
+                <if expression="choose == 1">
+                    <then>
+                        <assign variable="balance" expression="deposit(balance)"/>
+                    </then>
+                    <else>
+                        <if expression="choose == 2">
+                            <then>
+                                <assign variable="balance" expression="withdrawMoney(balance)"/>
+                            </then>
+                            <else>
+                                <if expression="choose == 3">
+                                    <then>
+                                        <call expression="askBalance(balance)"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;&#3585;&#3604; y &#3648;&#3614;&#3639;&#3656;&#3629;&#3629;&#3629;&#3585;&#3592;&#3634;&#3585;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617;, &#3585;&#3604; n &#3652;&#3611;&#3627;&#3609;&#3657;&#3634;&#3648;&#3617;&#3609;&#3641; &gt;&gt; &quot;" newline="True"/>
+                                        <input variable="YesNo"/>
+                                        <if expression="YesNo == &quot;y&quot;">
+                                            <then>
+                                                <assign variable="while1" expression="False"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;&#3586;&#3629;&#3610;&#3588;&#3640;&#3603;&#3607;&#3637;&#3656;&#3651;&#3594;&#3657;&#3610;&#3619;&#3636;&#3585;&#3634;&#3619;&#3588;&#3632;&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="askBalance" type="None" variable="balance">
+        <parameters>
+            <parameter name="balance" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;&#3618;&#3629;&#3604;&#3648;&#3591;&#3636;&#3609;&#3607;&#3633;&#3657;&#3591;&#3627;&#3617;&#3604;&#3588;&#3639;&#3629; &quot; &amp; balance &amp; &quot; &#3610;&#3634;&#3607;&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="deposit" type="Real" variable="balance">
+        <parameters>
+            <parameter name="balance" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result, money" type="Real" array="False" size=""/>
+            <output expression="&quot;&#3592;&#3635;&#3609;&#3623;&#3609;&#3648;&#3591;&#3636;&#3609; ===&gt; &quot;" newline="True"/>
+            <input variable="money"/>
+            <assign variable="balance" expression="balance + money"/>
+            <output expression="&quot;&#3618;&#3629;&#3604;&#3648;&#3591;&#3636;&#3609;&#3588;&#3591;&#3648;&#3627;&#3621;&#3639;&#3629; : &quot; &amp; balance &amp; &quot; &#3610;&#3634;&#3607;&quot;" newline="True"/>
+        </body>
     </function>
     <function name="withdrawMoney" type="Real" variable="balance">
         <parameters>
