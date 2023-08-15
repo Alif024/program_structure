@@ -42,8 +42,8 @@ while True:
         try:
             system('cls')
             print("หาค่าแรงดันไฟฟ้า")
-            I = int(input("Electric Current >> "))
-            R = int(input("Resistance >> "))
+            I = float(input("Electric Current >> "))
+            R = float(input("Resistance >> "))
             print(f'Voltage = {voltage(I, R):,.3f} V')
             input("กด Enter")
         except:
@@ -52,8 +52,8 @@ while True:
         try:
             system('cls')
             print("หาค่ากระแสไฟฟ้า")
-            V = int(input("Voltage >> "))
-            R = int(input("Resistance >> "))
+            V = float(input("Voltage >> "))
+            R = float(input("Resistance >> "))
             print(f'Electric Current = {electricCurrent(V, R):,.3f} A')
             input("กด Enter")
         except:
@@ -62,8 +62,8 @@ while True:
         try:
             system('cls')
             print("หาค่าความต้านทาน")
-            I = int(input("Electric Current >> "))
-            V = int(input("Voltage >> "))
+            I = float(input("Electric Current >> "))
+            V = float(input("Voltage >> "))
             print(f'Resistance = {resistance(I, V):,.3f} Ω')
             input("กด Enter")
         except:

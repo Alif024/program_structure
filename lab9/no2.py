@@ -29,7 +29,7 @@ while True:
     )
     while True:
         try:
-            choose = int(input("เลือกการทำงานของโปรแกรม >> "))
+            choose = float(input("เลือกการทำงานของโปรแกรม >> "))
             if choose >= 1 and choose <= 5:
                 break
             else:
@@ -58,7 +58,7 @@ while True:
     if choose == 1:
         try:
             print("คำนวณหาพื้นที่สี่เหลี่ยมจัตุรัส")
-            sideLength = int(input("ใส่ความยาวด้าน >> "))
+            sideLength = float(input("ใส่ความยาวด้าน >> "))
             print(f"พื้นที่สี่เหลี่ยมจัตุรัส = {square(sideLength):,.3f}")
             input("กด Enter")
         except:
@@ -66,8 +66,8 @@ while True:
     elif choose == 2:
         try:
             print("คำนวณหาพื้นที่สี่เหลี่ยมพื้นผ้า")
-            width = int(input("ใส่ความกว้าง >> "))
-            length = int(input("ใส้ความยาว >> "))
+            width = float(input("ใส่ความกว้าง >> "))
+            length = float(input("ใส้ความยาว >> "))
             print(f"พื้นที่สี่เหลี่ยมพื้นผ้า = {rectangular(width, length):,.3f}")
             input("กด Enter")
         except:
@@ -75,7 +75,7 @@ while True:
     elif choose == 3:
         try:
             print("คำนวณหาพื้นที่วงกลม")
-            radius = int(input("ใส้ความยาวรัศมี >> "))
+            radius = float(input("ใส้ความยาวรัศมี >> "))
             print(f"พื้นที่วงกลม = {circle(radius):,.3f}")
             input("กด Enter")
         except:
@@ -83,7 +83,7 @@ while True:
     elif choose == 4:
         try:
             print("คำนวณหาพื้นที่สามเหลี่ยมด้านเท่า")
-            sideLength = int(input("ใส่ความยาวด้าน >> "))
+            sideLength = float(input("ใส่ความยาวด้าน >> "))
             print(f"พื้นที่สามเหลี่ยมด้านเท่า = {equilateralTriangle(sideLength):,.3f}")
             input("กด Enter")
         except:
