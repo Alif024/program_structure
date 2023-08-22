@@ -4,8 +4,7 @@ from random import randint
 def random_num():
     rdNum = randint(0, 1000000)
     print(f"{rdNum:,}")
-    split_num = list(str(rdNum))
-    return [int(i) for i in split_num]
+    return [int(i) for i in list(str(rdNum))]
 
 
 def even_num(listNum):
